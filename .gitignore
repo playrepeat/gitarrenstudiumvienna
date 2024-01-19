@@ -33,6 +33,17 @@ bower_components/
 .vscode/
 *.code-workspace
 
+# IDE - IntelliJ, WebStorm, PyCharm, PhpStorm, RubyMine, etc.
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release/
 
@@ -93,3 +104,19 @@ dist/
 # Temporary folders
 tmp/
 temp/
+
+# Other common IDEs
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*.swn
+
+# Visual Studio cache files
+.vs/
+*.csproj
+*.vbproj
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
