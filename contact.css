@@ -1,0 +1,233 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    color: gold;
+  
+  }
+body{
+    
+    background-color: black;
+    background-size: cover; 
+}
+  
+  .title{
+    display: flex;
+  }
+  
+  .title .left-side{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 120px 0px 0px;
+    letter-spacing: 3px;
+  }
+  
+  .title .right-side{
+    width: 50%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .title .right-side p{
+    width: 500px;
+    letter-spacing: 1px;
+    line-height: 30px;
+  }
+  
+  .title .right-side p span{
+    font-weight: 600;
+  }
+  
+  .container{
+    display: flex;
+  }
+
+  .title .nav-menu{
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+  }
+
+.title .nav-menu li a {
+    color: #ffd700;
+    text-decoration:solid;
+    padding: 5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.title .nav-menu li a:hover{
+    background: yellow;
+    color: black;
+}
+
+
+  .container .left-side{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    padding: 0px 120px 0px 0px;
+    height: 530px;
+  }
+  
+  .container .left-side .item{
+    margin-bottom: 65px;
+  }
+  
+  .container .left-side .item h3{
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  
+  .container .left-side .item > a{
+    border-bottom: 1px dotted gold;
+    font-size: 18px;
+    color: gold;
+  }
+  
+  .container .left-side .item span{
+    font-size: 18px;
+  }
+  
+  .container .left-side .item .icons a{
+    padding: 0px 0px 0px 30px;
+    font-size: 24px;
+  }
+  
+  .container .right-side{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 530px;
+  }
+  
+  .container .right-side .feedback-input{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .container .right-side .feedback-input{
+    color:gold;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid grey;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+}
+
+.feedback-input input:focus { border:2px solid #ffd700; }
+  
+.container .right-side textarea{
+    color: gold;
+    width: 100%;
+    font-size: 20px;
+    height: 300px;
+    line-height: 150%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    resize: none;
+  }
+  
+ 
+
+
+[type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: darkgrey;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:black;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+  }
+  [type="submit"]:hover { background:#ffd700; }
+  
+ 
+  
+  @media (max-width: 1200px){
+    .title{
+      flex-direction: column;
+    }
+    .title .left-side{
+      width: 100%;
+      justify-content: flex-start;
+      padding: 40px 0px 40px 40px;
+    }
+    .title .right-side{
+      width: 100%;
+      padding: 50px 0px 30px 0px;
+    }
+    .container{
+      flex-direction: column-reverse;
+    }
+    .title .right-side p{
+      width: 90%;
+    }
+    .container .right-side{
+      width: 100%;
+    }
+    .container .right-side form{
+      width: 90%;
+    }
+    .container .right-side .feedback-input{
+      width: 100%;
+    }
+    .container .right-side .feedback-input input{
+      width: 49%;
+    }
+    .container .left-side{
+      width: 90%;
+      text-align: left;
+      align-items: flex-start;
+      margin: auto;
+      padding: 60px 0px 0px 0px;
+      background: none;
+    }
+    .container .left-side .item{
+      margin-bottom: 50px;
+    }
+    .container .left-side .item .icons a{
+      padding: 0px 20px 15px 0px;
+    }
+  }
+  
+  @media (max-width: 520px){
+    .container .right-side .top{
+      flex-direction: column;
+      height: 110px;
+      margin-bottom: 10px;
+    }
+    .container .right-side .top input{
+      width: 100%;
+    }
+    .container .right-side textarea{
+      margin-bottom: 10px;
+    }
+  }
