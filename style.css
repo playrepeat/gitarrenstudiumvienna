@@ -11,6 +11,8 @@ body {
 	background-image: url(images/bc.jpeg);
 	background-size: cover;
 	background-position: center center;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 
@@ -224,6 +226,20 @@ overlay
 	animation: animate-out-middle-bar .6s linear 1 both
 }
 
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 52px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	color: gold;
+	font-weight:100;
+	margin-right: 20px;
+	font-family: 'Work sans';
+  }
 
 /* ====================================
 Animation keyframes
