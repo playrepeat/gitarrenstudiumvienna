@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="overlay-navigation">
+	<nav role="navigation">
+		<ul>
+			<li><a href="index" data-content="The beginning">Home</a></li>
+			<li><a href="info" data-content="Curious?">Über Mich</a></li>
+			<li><a href="videos" data-content="Lord of the Quazar">Videos</a></li>
+			<li><a href="contact" data-content="">Kontakt</a></li>
+
+		</ul>
+	</nav>
+</div>
+
+<section class="home">
+
+	<div class="open-overlay">
+		<span class="bar-top"></span>
+		<span class="bar-middle"></span>
+		<span class="bar-bottom"></span>
+	</div>
+</section>
+<div class="footer">
+	<p>copyright © Fekete Gabor 2024</p>
+  </div>
+ 
+<script type="text/javascript" charset="UTF-8" src="../js/overlay.js"></script>
+
+
+<div id="flash-messages">
+	<% if (messages.success) { %>
+	  <div class="flash-message success"><%= messages.success %></div>
+	<% } else if (messages.error) { %>
+	  <div class="flash-message error"><%= messages.error %></div>
+	<% } %>
+  </div>
+</body>
+</html>

@@ -4,18 +4,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>gitarrenstudiumvienna</title>
-	<link rel="stylesheet" href="../public/css/styles.css">
-	<link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	
 </head>
 <body>
 <div class="overlay-navigation">
 	<nav role="navigation">
 		<ul>
-			<li><a href="index.html" data-content="The beginning">Home</a></li>
-			<li><a href="info.html" data-content="Curious?">Über Mich</a></li>
-			<li><a href="videos.html" data-content="Lord of the Quazar">Videos</a></li>
-			<li><a href="contact.html" data-content="">Kontakt</a></li>
+			<li><a href="index" data-content="The beginning">Home</a></li>
+			<li><a href="info" data-content="Curious?">Über Mich</a></li>
+			<li><a href="videos" data-content="Lord of the Quazar">Videos</a></li>
+			<li><a href="contact" data-content="">Kontakt</a></li>
 
 		</ul>
 	</nav>
@@ -35,13 +38,13 @@
 		
 	  		<div class="item">
 				<h3>ADDRESS</h3>
-				<span>Vienna</span>
+				<a href="">Vienna</a>
 	  		</div>
 	  		<div class="item">
 				<h3>ANDERE</h3>
 				<div class="icons">
 				  <a href="https://www.youtube.com/@gaborfekete2864" class = "fa fa-youtube"></a>
-				  <a href="" class = "fa fa-instagram"></a>
+				  <a href="" class = "fa fa-instagram "></a>
 				  <a href="" class = "fa fa-facebook"></a>
 				  <a href="" class = "fa fa-whatsapp"></a>
 				 
@@ -49,7 +52,7 @@
 			</div>
 		</div>
 		<div class="right-side">
-        	<form action="http://localhost:3000/contact" method="post">
+        	<form  action="http://localhost:3000/contact" method="post">
         	    <input name="yourname" type="text" class="feedback-input" placeholder="Name" required/> 
             	<input name="youremail" type="email" class="feedback-input" placeholder="Email" required />
             	<input name="yoursubject" type="text" class="feedback-input" placeholder="Subject" required/> 
@@ -72,8 +75,14 @@
 	<p>copyright © Fekete Gabor 2024</p>
   </div>
  
-<script type="text/javascript" src="../public/js/overlay.js"></script>
+<script type="text/javascript" src="../js/overlay.js"></script>
 
-
+<div id="flash-messages">
+	<% if (messages.success) { %>
+	  <div class="flash-message success"><%= messages.success %></div>
+	<% } else if (messages.error) { %>
+	  <div class="flash-message error"><%= messages.error %></div>
+	<% } %>
+  </div>
 </body>
 </html>
