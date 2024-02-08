@@ -4,7 +4,7 @@ const flash = require('express-flash');
 
 const pageController = {
   getIndex: (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/index'));
+    res.render('index.ejs', { messages: req.flash() });
   },
   getVideos: (req, res) => {
     res.sendFile(path.join(__dirname, '../views/videos'));
