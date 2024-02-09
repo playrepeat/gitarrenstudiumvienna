@@ -1,7 +1,10 @@
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new FormData(this);
-    
+
+    // Reference to the form element
+    const form = this;
+
     fetch('/contact', {
         method: 'POST',
         body: formData
@@ -16,6 +19,11 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
             position: "center",
             backgroundColor: data.success ? "green" : "red",
         }).showToast();
+
+        // Clear form inputs on successful submission
+        if (data.success) {
+            form.reset();
+        }
     })
     .catch(error => {
         Toastify({
@@ -26,5 +34,9 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
             position: "right",
             backgroundColor: "red",
         }).showToast();
+
+        
+            form.reset();
+        
     });
 });
