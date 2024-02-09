@@ -44,7 +44,7 @@ bower_components/
 .project
 .settings/
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
+# Compiled binary addons (https://nodejs.org/api/addons)
 build/Release/
 
 # Dependency directories
