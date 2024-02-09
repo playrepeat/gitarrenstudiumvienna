@@ -10,10 +10,10 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     .then(data => {
         Toastify({
             text: data.message,
-            duration: 3000,
+            duration: 5000,
             close: true,
             gravity: "top",
-            position: "right",
+            position: "center",
             backgroundColor: data.success ? "green" : "red",
         }).showToast();
     })

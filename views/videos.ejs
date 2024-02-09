@@ -38,7 +38,13 @@
 
 </section>
 <div class="footer">
-	<p>copyright © Fekete Gabor 2024</p>
+	<p id="copyright"></p>
+
+    <script>
+    	var currentYear = new Date().getFullYear();
+
+        document.getElementById("copyright").innerText = "Copyright © Fekete Gabor " + currentYear;
+    </script>
 </div>
 
 <script type="text/javascript" src="../js/overlay.js"></script>

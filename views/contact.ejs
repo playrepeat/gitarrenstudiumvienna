@@ -73,19 +73,25 @@
 
 
 <div class="footer">
-	<p>copyright © Fekete Gabor 2024</p>
-  </div>
- 
+	<p id="copyright"></p>
+
+    <script>
+    	var currentYear = new Date().getFullYear();
+
+        document.getElementById("copyright").innerText = "Copyright © Fekete Gabor " + currentYear;
+    </script>
+</div>
+
 <script type="text/javascript" src="../js/overlay.js"></script>
 <script type="text/javascript" src="../js/toast.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script> 
+<!--
 <div id="flash-messages">
 	<% if (messages.success) { %>
 	  <div class="flash-message success"><%= messages.success %></div>
 	<% } else if (messages.error) { %>
 	  <div class="flash-message error"><%= messages.error %></div>
 	<% } %>
-  </div>
+  </div> -->
 </body>
 </html>
