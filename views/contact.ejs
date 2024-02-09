@@ -52,7 +52,7 @@
 			</div>
 		</div>
 		<div class="right-side">
-        	<form  action="http://localhost:3000/contact" method="post">
+        	<form  id="contact-form" action="http://localhost:3000/contact" method="post">
         	    <input name="yourname" type="text" class="feedback-input" placeholder="Name" required/> 
             	<input name="youremail" type="email" class="feedback-input" placeholder="Email" required />
             	<input name="yoursubject" type="text" class="feedback-input" placeholder="Subject" required/> 
@@ -76,6 +76,7 @@
   </div>
  
 <script type="text/javascript" src="../js/overlay.js"></script>
+<script type="text/javascript" src="../js/toast.js"></script>
 
 <div id="flash-messages">
 	<% if (messages.success) { %>

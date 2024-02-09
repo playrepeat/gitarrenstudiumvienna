@@ -4,7 +4,7 @@ const session = require('express-session');
 
 
 const contactController = {
-  sendEmail: async (req, res) => {
+  sendEmail: (req, res) => {
     const { yourname, youremail, yoursubject, yourmessage } = req.body;
 
     // Create a Nodemailer transporter
@@ -27,18 +27,16 @@ const contactController = {
       text: `Name: ${yourname}\nEmail: ${youremail}\nMessage: ${yourmessage}`,
     };
 
-    // Send email
-    try {
-      await transporter.sendMail(mailOptions);
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+          return res.status(500).json({ success: false, message: 'Failed to send email.' });
+      }
+      res.status(200).json({ success: true, message: 'Email sent successfully!' });
+  });
 
-      req.flash('success', 'Email sent successfully!');
-      res.redirect('/');
-   } catch (error) {
-      console.error(error);
-      req.flash('error', 'Failed to send email.');
-      res.redirect('/contact');
-    }
-  }
+  
+   
+  } 
 };
   
 
