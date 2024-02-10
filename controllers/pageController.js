@@ -1,10 +1,8 @@
 const path = require('path');
-const flash = require('express-flash');  
-
 
 const pageController = {
   getIndex: (req, res) => {
-    res.render('index.ejs', { messages: req.flash() });
+    res.render('index.ejs');
   },
   getAbout: (req, res) => {
     res.render('about.ejs' );
@@ -13,8 +11,7 @@ const pageController = {
     res.render('videos.ejs' );
   },
   getContact: (req, res) => {
-    req.flash('success', 'Email sent successfully!');
-    res.render('contact.ejs', { messages: req.flash() });
+    res.render('contact.ejs');
   },
 };
 

@@ -9,6 +9,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         method: 'POST',
         body: formData
     })
+    
     .then(response => response.json())
     .then(data => {
         Toastify({
@@ -22,7 +23,10 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 
         // Clear form inputs on successful submission
         if (data.success) {
-            form.reset();
+            // Delay form reset until after the toast is shown
+            setTimeout(() => {
+                form.reset();
+            }, 1000);
         }
     })
     .catch(error => {
@@ -34,9 +38,5 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
             position: "right",
             backgroundColor: "red",
         }).showToast();
-
-        
-            form.reset();
-        
     });
 });

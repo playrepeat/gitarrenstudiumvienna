@@ -1,11 +1,18 @@
+require("dotenv").config();
+const express = require('express');
+
+const app = express();
+const path = require('path');
+const ejs = require('ejs');
+
 const nodemailer = require('nodemailer');
-const flash = require('express-flash');  
-const session = require('express-session'); 
 
 
 const contactController = {
   sendEmail: (req, res) => {
-    const { yourname, youremail, yoursubject, yourmessage } = req.body;
+    const { name, email, subject, message } = req.body;
+
+    console.log(req.body);
 
     // Create a Nodemailer transporter
     const transporter = nodemailer.createTransport({
@@ -19,12 +26,15 @@ const contactController = {
       },
     });
 
-    // Email options
     const mailOptions = {
-      from: process.env.GMAIL_USER, // Replace with your email
-      to: process.env.EMAIL, // Replace with the recipient's email
+      from: process.env.GMAIL_USER, 
+      to: process.env.EMAIL, 
       subject: 'Contact Form Submission',
-      text: `Name: ${yourname}\nEmail: ${youremail}\nMessage: ${yourmessage}`,
+      text: `You got a message from 
+      Email : ${email}
+      Name: ${name}
+      Subject: ${subject}
+      Message: ${message}`,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {

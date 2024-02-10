@@ -6,11 +6,10 @@
 	<link rel="shortcut icon" href="#">
 	<title>Gitarrenstudium Vienna</title>
 	<link rel="stylesheet" href="../css/styles.css">
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 	
 </head>
 <body>
@@ -26,7 +25,7 @@
 	</nav>
 </div>
 
-<!--<section class="home"> -->
+
 	<div class="container">
 		<div class="left-side">
 	  		<div class="item">
@@ -54,11 +53,11 @@
 			</div>
 		</div>
 		<div class="right-side">
-        	<form  id="contact-form" action="http://localhost:3000/contact" method="post">
-        	    <input name="yourname" type="text" class="feedback-input" placeholder="Name" required/> 
-            	<input name="youremail" type="email" class="feedback-input" placeholder="Email" required />
-            	<input name="yoursubject" type="text" class="feedback-input" placeholder="Subject" required/> 
-            	<textarea name="yourmessage" class="feedback-input" placeholder="Message" required> </textarea>
+        	<form id="contact-form" method="post" action="http://localhost:3000/contact" enctype="multipart/form-data">
+        	    <input id="name" name="name" type="text" class="feedback-input" placeholder="Name" required/> 
+            	<input id="email" name="email" type="email" class="feedback-input" placeholder="Email" required />
+            	<input id="subject" name="subject" type="text" class="feedback-input" placeholder="Subject" required/> 
+            	<textarea id="message" name="message" class="feedback-input" placeholder="Message" required> </textarea>
             	<button type="submit">Senden</button>
             </form>
        
@@ -69,7 +68,7 @@
 		<span class="bar-middle"></span>
 		<span class="bar-bottom"></span>
 	</div>
-<!--</section> -->
+
 
 
 
@@ -85,14 +84,7 @@
 
 <script type="text/javascript" src="../js/overlay.js"></script>
 <script type="text/javascript" src="../js/toast.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script> 
-<!--
-<div id="flash-messages">
-	<% if (messages.success) { %>
-	  <div class="flash-message success"><%= messages.success %></div>
-	<% } else if (messages.error) { %>
-	  <div class="flash-message error"><%= messages.error %></div>
-	<% } %>
-  </div> -->
+
+
 </body>
 </html>
